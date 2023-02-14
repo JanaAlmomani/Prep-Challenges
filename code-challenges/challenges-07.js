@@ -40,32 +40,32 @@ const objLat = (obj) => {
 //  fullName and tech if the applicant has more than one year of Experience
 
 // Input:
-// let cvs = [
-//     {
-//         firstName: "Jason",
-//         lastName: "James",
-//         yearsOfExperience: 20,
-//         tech: "JS"
-//     },
-//     {
-//         firstName: "Shira",
-//         lastName: null,
-//         yearsOfExperience: 5,
-//         tech: ".Net"
-//     },
-//     {
-//         firstName: "Dmitri",
-//         lastName: "Akkerman",
-//         yearsOfExperience: 1,
-//         tech: "Python"
-//     },
-//     {
-//         firstName: "Isabella",
-//         lastName: null,
-//         yearsOfExperience: 7,
-//         tech: "Java"
-//     }
-// ]
+let cvs = [
+    {
+        firstName: "Jason",
+        lastName: "James",
+        yearsOfExperience: 20,
+        tech: "JS"
+    },
+    {
+        firstName: "Shira",
+        lastName: null,
+        yearsOfExperience: 5,
+        tech: ".Net"
+    },
+    {
+        firstName: "Dmitri",
+        lastName: "Akkerman",
+        yearsOfExperience: 1,
+        tech: "Python"
+    },
+    {
+        firstName: "Isabella",
+        lastName: null,
+        yearsOfExperience: 7,
+        tech: "Java"
+    }
+]
 //
 // Output:
 // [
@@ -90,21 +90,22 @@ const objLat = (obj) => {
 const cvFormatter = (arr) => {
     // write your code here
     let newArr=[];
+    let bigItem;
     let obj={};
-    for(let i=0;i<arr.length;i++){
-      if(arr[i].yearsOfExperience >1){
-          let  bigItem = arr[i];
-            obj={};
-            obj.tech=bigItem.tech;
-        obj.fullName=bigItem.firstName +" "+bigItem.LastName;
-        if(bigItem.LastName==null)
+    for(let i=0;i<arr.length ;i++){
+        if(arr[i].yearsOfExperience >1){
+             bigItem =arr[i];
+             obj={};
+            obj.tech=bigItem.tech
             obj.fullName=bigItem.firstName;
-      }
-      newArr.push(obj);
+            if(bigItem.lastName)
+            obj.fullName=bigItem.firstName+" "+bigItem.lastName;
+        
     }
-    return newArr;
-
-};
+    newArr.push(obj);
+}
+   return newArr;   
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
