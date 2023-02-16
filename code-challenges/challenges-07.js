@@ -96,15 +96,14 @@ const cvFormatter = (arr) => {
         if(arr[i].yearsOfExperience >1){
              bigItem =arr[i];
              obj={};
-            obj.tech=bigItem.tech
-            obj.fullName=bigItem.firstName;
-            if(bigItem.lastName)
             obj.fullName=bigItem.firstName+" "+bigItem.lastName;
-        
+            if(bigItem.lastName==null)
+            obj.fullName=bigItem.firstName;
+            obj.tech=bigItem.tech;
     }
-    newArr.push(obj);
+      newArr.push(obj);
 }
-   return newArr;   
+return newArr;   
 }
 // -------------------------------------------------------------------------------------------------------
 
