@@ -22,9 +22,9 @@
 
 const objLat = (obj) => {
     // write your code here
-    let l=obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
-    let f=obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
-    return "my name is "+f+" "+l+" "+"I am "+obj.age+" "+"YO, and I love "+obj.hobby+"."; 
+    let l = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
+    let f = obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
+    return "my name is " + f + " " + l + " " + "I am " + obj.age + " " + "YO, and I love " + obj.hobby + ".";
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -40,32 +40,32 @@ const objLat = (obj) => {
 //  fullName and tech if the applicant has more than one year of Experience
 
 // Input:
-// let cvs = [
-//     {
-//         firstName: "Jason",
-//         lastName: "James",
-//         yearsOfExperience: 20,
-//         tech: "JS"
-//     },
-//     {
-//         firstName: "Shira",
-//         lastName: null,
-//         yearsOfExperience: 5,
-//         tech: ".Net"
-//     },
-//     {
-//         firstName: "Dmitri",
-//         lastName: "Akkerman",
-//         yearsOfExperience: 1,
-//         tech: "Python"
-//     },
-//     {
-//         firstName: "Isabella",
-//         lastName: null,
-//         yearsOfExperience: 7,
-//         tech: "Java"
-//     }
-// ]
+let cvs = [
+    {
+        firstName: "Jason",
+        lastName: "James",
+        yearsOfExperience: 20,
+        tech: "JS"
+    },
+    {
+        firstName: "Shira",
+        lastName: null,
+        yearsOfExperience: 5,
+        tech: ".Net"
+    },
+    {
+        firstName: "Dmitri",
+        lastName: "Akkerman",
+        yearsOfExperience: 1,
+        tech: "Python"
+    },
+    {
+        firstName: "Isabella",
+        lastName: null,
+        yearsOfExperience: 7,
+        tech: "Java"
+    }
+]
 //
 // Output:
 // [
@@ -89,8 +89,10 @@ const objLat = (obj) => {
 
 const cvFormatter = (arr) => {
     // write your code here
-     let newArr = [];
-     let obj;
+
+    let newArr = [];
+    let obj;
+
   for(let i=0;i<arr.length;i++)
     {
       
@@ -112,7 +114,13 @@ const cvFormatter = (arr) => {
       
     }
    return newArr;   
-};
+
+}
+
+
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
