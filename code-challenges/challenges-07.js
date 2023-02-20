@@ -89,21 +89,29 @@ const objLat = (obj) => {
 
 const cvFormatter = (arr) => {
     // write your code here
-    let newArr=[];
-    let obj={};
-    for(let i=0;i<arr.length;i++){
-      if(arr[i].yearsOfExperience >1){
-          let  bigItem = arr[i];
-            obj={};
-            obj.tech=bigItem.tech;
-        obj.fullName=bigItem.firstName +" "+bigItem.LastName;
-        if(bigItem.LastName==null)
-            obj.fullName=bigItem.firstName;
+     let newArr = [];
+     let obj;
+  for(let i=0;i<arr.length;i++)
+    {
+      
+      if(arr[i].yearsOfExperience>1){
+          
+       obj={
+          fullName:"",
+         tech :arr[i].tech
+        }
+        if(arr[i].lastName==null)
+            obj.fullName=arr[i].firstName;
+        else if(arr[i].firstName==null)
+          obj.fullName=arr[i].lastName;
+        else 
+          obj.fullName=arr[i].firstName+" "+arr[i].lastName;
+        
+       newArr.push(obj);  
       }
-      newArr.push(obj);
+      
     }
-    return newArr;
-
+   return newArr;   
 };
 // -------------------------------------------------------------------------------------------------------
 
