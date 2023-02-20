@@ -22,9 +22,9 @@
 
 const objLat = (obj) => {
     // write your code here
-    let l=obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
-    let f=obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
-    return "my name is "+f+" "+l+" "+"I am "+obj.age+" "+"YO, and I love "+obj.hobby+"."; 
+    let l = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
+    let f = obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
+    return "my name is " + f + " " + l + " " + "I am " + obj.age + " " + "YO, and I love " + obj.hobby + ".";
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -89,22 +89,27 @@ let cvs = [
 
 const cvFormatter = (arr) => {
     // write your code here
-    let newArr=[];
-    let bigItem;
-    let obj={};
-    for(let i=0;i<arr.length ;i++){
-        if(arr[i].yearsOfExperience >1){
-             bigItem =arr[i];
-             obj={};
-            obj.fullName=bigItem.firstName+" "+bigItem.lastName;
-            if(bigItem.lastName==null)
-            obj.fullName=bigItem.firstName;
-            obj.tech=bigItem.tech;
+    let newArr = [];
+    let obj = {};
+    let bigtem;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].yearsOfExperience > 1) {
+            bigtem = arr[i];
+            if (bigtem.firstName == null)
+                obj.fullName = bigtem.lastName;
+            else if (bigtem.lastName == null)
+                obj.fullName = bigtem.firstName;
+            else {
+                obj.fullName = bigtem.firstName + " " + bigtem.lastName;
+            }
+            obj.tech = bigtem.tech;
+
+        }
+        newArr.push(obj);
     }
-      newArr.push(obj);
+    return newArr;
 }
-return newArr;   
-}
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
