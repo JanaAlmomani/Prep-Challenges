@@ -90,24 +90,29 @@ let cvs = [
 const cvFormatter = (arr) => {
     // write your code here
     let newArr = [];
-    let obj = {};
-    let bigtem;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].yearsOfExperience > 1) {
-            bigtem = arr[i];
-            if (bigtem.firstName == null)
-                obj.fullName = bigtem.lastName;
-            else if (bigtem.lastName == null)
-                obj.fullName = bigtem.firstName;
-            else {
-                obj.fullName = bigtem.firstName + " " + bigtem.lastName;
-            }
-            obj.tech = bigtem.tech;
-
+    let obj;
+  for(let i=0;i<arr.length;i++)
+    {
+      
+      if(arr[i].yearsOfExperience>1){
+          
+       obj={
+          fullName:"",
+         tech :arr[i].tech
         }
-        newArr.push(obj);
+        if(arr[i].lastName==null)
+            obj.fullName=arr[i].firstName;
+        else if(arr[i].firstName==null)
+          obj.fullName=arr[i].lastName;
+        else 
+          obj.fullName=arr[i].firstName+" "+arr[i].lastName;
+        
+       newArr.push(obj);  
+      }
+      
     }
-    return newArr;
+   return newArr;   
+
 }
 
 // -------------------------------------------------------------------------------------------------------
