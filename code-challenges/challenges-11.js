@@ -19,7 +19,7 @@
 function square(arr) {
     // write your code here
     const sq = arr.map(num => num * num);
-    console.log(sq);
+    return sq;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -60,7 +60,7 @@ function square(arr) {
 function fullName(arr) {
     // write your code here
     const fN = arr.map(item => item.firstName + " " + item.lastName);
-    console.log(fN);
+    return fN;
 
 }
 // -------------------------------------------------------------------------------------------------------
