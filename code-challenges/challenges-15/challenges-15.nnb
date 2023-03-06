@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Equality In An Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function equalizeArray(arr) {\n    // Write your code here\n let count=1;\n let max=0;\n arr.sort((a,b) =>a-b);\nfor(let i=0 ;i<arr.length; i++){\n    if(arr[i] === arr[i+1] )\n        count++;\n    else{\n        if(count>max) {\n        max=count;}\n    count=1; } \n}\n     return(arr.length-max);\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function howManyGames(p, d, m, s) {\n    // Return the number of games you can buy\nlet sum=p;\nlet num_games=1;\nlet ex= p - d;\nwhile(sum <= s){\n    if(sum + p > s){\n       break; \n    }\n    ex=p -d;\n    if(ex < m){\n        ex = m;\n    }\n    sum=sum+ex;\n    p=ex;\n    num_games++;\n}\nif(p > s){\n    return 0;\n}else{\n    return num_games;\n    }\n    \n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Sherlock And Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
