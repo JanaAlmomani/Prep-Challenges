@@ -40,10 +40,10 @@
 
 const objectCounter = (obj) => {
     // write your code here
-    const count = obj.reduce((counter, obj) => {
-        if (obj.votes_To != "") counter += 1
-        return counter;
-      }, 0); 
+    let count = obj.reduce((acc, obj) => {
+        return acc + 1;
+    }, 0);
+    return count;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -64,9 +64,9 @@ const objectCounter = (obj) => {
 
 const stringReverse = (str) => {
     // write your code here
-        return str.trim().split(' ').reduce((result, word) => (
-                  word ? `${word} ${result}` : result
-              ))
+    return str.trim().split(' ').reduce((result, word) => (
+        word ? `${word} ${result}` : result
+    ))
 }
 
 // -------------------------------------------------------------------------------------------------------
