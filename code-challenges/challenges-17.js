@@ -16,7 +16,25 @@
 
 const recursionPattern = (int1, int2) => {
     // write your code here
-}
+    let newArr = [];
+   
+    
+        if ()
+            return newArr;
+
+    if (int1 > 0) {
+        newArr.push(int1);
+        return  recursionPattern(int1 - int2, int2);
+
+    } else {
+        newArr.push(int1);
+        return  recursionPattern(int1 + int2, int2);
+    }
+    }
+
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -60,21 +78,21 @@ const filterLinks = (str) => {
 const isPalindrome = (str) => {
     // write your code here
     const cleanstr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-     // convert string to an array
-     const arrayValues = cleanstr.split('');
+    // convert string to an array
+    const arrayValues = cleanstr.split('');
 
-     // reverse the array values
-     const reverseArrayValues = arrayValues.reverse();
- 
-     // convert array to string
-     const reverseString = reverseArrayValues.join('');
- 
-     if(cleanstr == reverseString) {
-         return true;
-     }
-     else {
-         return false;
-     }
+    // reverse the array values
+    const reverseArrayValues = arrayValues.reverse();
+
+    // convert array to string
+    const reverseString = reverseArrayValues.join('');
+
+    if (cleanstr == reverseString) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 // -------------------------------------------------------------------------------------------------------
 
