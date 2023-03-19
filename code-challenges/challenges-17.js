@@ -16,21 +16,19 @@
 
 const recursionPattern = (int1, int2) => {
     // write your code here
-    let newArr = [];
-   
-    
-        if ()
-            return newArr;
+    const pattern = [int1];
 
-    if (int1 > 0) {
-        newArr.push(int1);
-        return  recursionPattern(int1 - int2, int2);
+    if (int1 <= 0) {
+        return pattern;
+    }
 
-    } else {
-        newArr.push(int1);
-        return  recursionPattern(int1 + int2, int2);
-    }
-    }
+    const nextNum = int1 - int2;
+    const subPattern = recursionPattern(nextNum, int2);
+
+    pattern.push(...subPattern, int1);
+    return pattern;
+
+}
 
 
 
